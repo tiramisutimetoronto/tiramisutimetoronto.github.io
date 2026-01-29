@@ -46,7 +46,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1074&q=80" alt="Our cafe" class="rounded-xl shadow-lg w-full">
+                    <img src="https://tiramisutimetoronto.github.io/pics/Tiramisu_boxes.jpg" alt="Our product"  class="rounded-xl shadow-lg w-full h-[28rem] object-cover">
 </div>
             </div>
         </section>
@@ -57,19 +57,34 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Classic Tiramisu -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://www.cookingclassy.com/wp-content/uploads/2022/08/tiramisu-17.jpg" alt="Classic Tiramisu" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                  <div class="relative overflow-hidden rounded-xl">
+                    <img id="tiramisu-carousel"
+                        src="https://www.cookingclassy.com/wp-content/uploads/2022/08/tiramisu-17.jpg"
+                        alt="Tiramisu"
+                        class="w-full h-80 object-cover group-hover:scale-105 transition duration-500 rounded-xl">
+                        
+                    <!-- Left arrow -->
+                    <button onclick="prevTiramisu()" 
+                            class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                      ‹
+                    </button>
+                    
+                    <!-- Right arrow -->
+                    <button onclick="nextTiramisu()" 
+                            class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                      ›
+                    </button>
+                  </div>
+
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-800 mb-2">Tiramisu</h3>
+                    <p class="text-amber-700 mb-4">The original recipe with espresso-soaked ladyfingers and mascarpone cream. 500 ml serving.</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-amber-600 font-bold">$18.00</span>
                     </div>
-<div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Classic Tiramisu</h3>
-                        <p class="text-amber-700 mb-4">The original recipe with espresso-soaked ladyfingers and mascarpone cream. 500 ml serving.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-600 font-bold">$15.00</span>
-                            
-                        </div>
-                    </div>
+                  </div>
                 </div>
-                <!-- Panna Cotta -->
+                <!-- Panna Cotta 
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
                     <div class="overflow-hidden">
                         <img src="https://dishnthekitchen.com/wp-content/uploads/2025/01/coverItalianPannaCotta.jpg" alt="Panna Cotta" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
@@ -82,48 +97,114 @@
                             
                         </div>
                     </div>
-                </div>
-                <!-- Lemon Cookie Tiramisu -->
+                </div> -->
+                <!-- Panna Cotta Carousel Test -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_2x/public/2025-07/Lemon-Tiramisu_2025_Lifestyle_H_2071.jpg?itok=Huz_IS5Q" alt="Lemon Cookie Tiramisu" class="w-full h-80 object-cover  group-hover:scale-105 transition duration-500">
+                    <div class="relative overflow-hidden">
+                      <img id="Pennacotta_carousel"
+                          src="https://dishnthekitchen.com/wp-content/uploads/2025/01/coverItalianPannaCotta.jpg"
+                          alt="Panna Cotta"
+                          class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
+                      <button onclick="prevPennacotta()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">‹</button>
+                      <button onclick="nextPennacotta()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">›</button>
                     </div>
-<div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Lemon Cookie Tiramisu</h3>
-                        <p class="text-amber-700 mb-4">Zesty lemon cookies with vanilla mascarpone cream. 500 ml serving.</p>
+                  <div class="p-6">
+                        <h3 class="text-xl font-bold text-amber-800 mb-2">Panna Cotta</h3>
+                        <p class="text-amber-700 mb-4">Creamy panna cotta layered with seasonal fruit. 6 x 100 ml containers.</p>
                         <div class="flex justify-between items-center">
                             <span class="text-amber-600 font-bold">$18.00</span>
                             
                         </div>
                     </div>
+                </div> 
+                <!-- Lemon Cookie Tiramisu -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
+                  <div class="relative overflow-hidden rounded-xl">
+                    <img id="LemonCookie_carousel"
+                        src="https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_2x/public/2025-07/Lemon-Tiramisu_2025_Lifestyle_H_2071.jpg?itok=Huz_IS5Q"
+                        alt="Lemon Cookie Tiramisu"
+                        class="w-full h-80 object-cover group-hover:scale-105 transition duration-500 rounded-xl">
+                        
+                    <!-- Left arrow -->
+                    <button onclick="prevLemonCookie()" 
+                            class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                      ‹
+                    </button>
+                    
+                    <!-- Right arrow -->
+                    <button onclick="nextLemonCookie()" 
+                            class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                      ›
+                    </button>
+                  </div>
+
+                  <div class="p-6">
+                    <h3 class="text-xl font-bold text-amber-800 mb-2">Lemon Cookie Tiramisu</h3>
+                    <p class="text-amber-700 mb-4">Layers of lemon cookie crumble and mascarpone cream. 6 x 100 ml containers.</p>
+                    <div class="flex justify-between items-center">
+                      <span class="text-amber-600 font-bold">$18.00</span>
+                    </div>
+                  </div>
                 </div>
                 <!-- Pecan Pie -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://spiceislands.com/wp-content/uploads/Spice-Islands-Bourbon-Pecan-Pie-Pure-Vanilla-Extract-5-e1680888843873.jpg" alt="Pecan Pie" class="w-full h-80 object-cover group-hover:scale-105 transition duration-500">
-                    </div>
-<div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Pecan Pie</h3>
-                        <p class="text-amber-700 mb-4">Classic pecan pie with crust made from scratch. 6" pie.</p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-600 font-bold">$20.00</span>
-                            
-                        </div>
-                    </div>
+                <div class="relative overflow-hidden rounded-xl">
+                  <img id="PecanPie_carousel"
+                      src="https://spiceislands.com/wp-content/uploads/Spice-Islands-Bourbon-Pecan-Pie-Pure-Vanilla-Extract-5-e1680888843873.jpg"
+                      alt="Pecan Pie"
+                      class="w-full h-80 object-cover group-hover:scale-105 transition duration-500 rounded-xl">
+                      
+                  <!-- Left arrow -->
+                  <button onclick="prevPecanPie()" 
+                          class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                    ‹
+                  </button>
+                  
+                  <!-- Right arrow -->
+                  <button onclick="nextPecanPie()" 
+                          class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                    ›
+                  </button>
                 </div>
+
+                <div class="p-6">
+                  <h3 class="text-xl font-bold text-amber-800 mb-2">Pecan Pie</h3>
+                  <p class="text-amber-700 mb-4">Classic pecan pie with crust made from scratch. 6" pie.</p>
+                  <div class="flex justify-between items-center">
+                    <span class="text-amber-600 font-bold">$18.00</span>
+                  </div>
+                </div>
+              </div>
+              
                 <!-- Lemon Cookies -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
-                    <div class="overflow-hidden">
-                        <img src="https://thefirstyearblog.com/wp-content/uploads/2018/05/Lemon-Sugar-Cookies-2020-17.jpg" alt="Lemon Cookies" class="w-full h-80 object-cover object-[50%_80%] group-hover:scale-105 transition duration-500">
+                    <div class="relative overflow-hidden rounded-xl">
+                      <img id="LemonCookies_carousel"
+                          src="https://thefirstyearblog.com/wp-content/uploads/2018/05/Lemon-Sugar-Cookies-2020-17.jpg"
+                          alt="Lemon Cookies"
+                          class="w-full h-80 object-cover object-[50%_80%] group-hover:scale-105 transition duration-500 rounded-xl">
+
+                      <!-- Left arrow -->
+                      <button onclick="prevLemonCookies()"
+                              class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                        ‹
+                      </button>
+
+                      <!-- Right arrow -->
+                      <button onclick="nextLemonCookies()"
+                              class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">
+                        ›
+                      </button>
                     </div>
-<div class="p-6">
-                        <h3 class="text-xl font-bold text-amber-800 mb-2">Lemon Cookies</h3>
-                        <p class="text-amber-700 mb-4">Soft, buttery sugar cookies with bright lemon flavor and a light sugar finish. Box of 24. </p>
-                        <div class="flex justify-between items-center">
-                            <span class="text-amber-600 font-bold">$12.00</span>
-                           </div>
+
+                    <div class="p-6">
+                      <h3 class="text-xl font-bold text-amber-800 mb-2">Lemon Cookies</h3>
+                      <p class="text-amber-700 mb-4">SSoft, buttery sugar cookies with bright lemon flavor and a light sugar finish. Box of 24. </p>
+                      <div class="flex justify-between items-center">
+                        <span class="text-amber-600 font-bold">$15.00</span>
+                      </div>
                     </div>
-                </div>
+                  </div>
                 <!-- Build Your Own -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
                     <div class="overflow-hidden">
@@ -133,8 +214,8 @@
                         <h3 class="text-xl font-bold text-amber-800 mb-2">Build Your Own</h3>
                         <p class="text-amber-700 mb-4">Mix and match flavors to create your perfect tiramisu.</p>
                         <div class="flex justify-between items-center">
-                            <span class="text-amber-600 font-bold">From $8.99</span>
-                            <button class="bg-amber-100 hover:bg-amber-200 text-amber-800 px-4 py-2 rounded-full text-sm font-semibold transition duration-300">Customize</button>
+                            <span class="text-amber-600 font-bold">Starting from $8.99</span>
+                            
                         </div>
                     </div>
                 </div>
@@ -216,5 +297,128 @@
     </script>
     <script src="script.js"></script>
 <script src="https://huggingface.co/deepsite/deepsite-badge.js"></script>
+<script>
+  // -------------------
+  // Tiramisu Carousel
+  // -------------------
+  const tiramisuImages = [
+    "https://www.cookingclassy.com/wp-content/uploads/2022/08/tiramisu-17.jpg",
+    "https://tiramisutimetoronto.github.io/pics/Tiramisu_boxes.jpg",
+    "https://static01.nyt.com/images/2017/04/05/dining/05COOKING-TIRAMISU1/05COOKING-TIRAMISU1-googleFourByThree-v2.jpg"
+  ];
+
+  let tiramisuIndex = 0;
+
+  function showTiramisuImage() {
+    document.getElementById("tiramisu-carousel").src =
+      tiramisuImages[tiramisuIndex];
+  }
+
+  function nextTiramisu() {
+    tiramisuIndex = (tiramisuIndex + 1) % tiramisuImages.length;
+    showTiramisuImage();
+  }
+
+  function prevTiramisu() {
+    tiramisuIndex =
+      (tiramisuIndex - 1 + tiramisuImages.length) % tiramisuImages.length;
+    showTiramisuImage();
+  }
+  // -------------------
+  // Panna Cotta Carousel
+  // -------------------
+  const Pennacotta_images = [
+    "https://dishnthekitchen.com/wp-content/uploads/2025/01/coverItalianPannaCotta.jpg",
+    "https://www.eatme.eu/media/hpyphij5/bramen-limoen-panna-cotta-met-bramen.jpg?width=1536&height=1024&quality=100",
+    "https://www.abakingjourney.com/wp-content/uploads/2020/09/Mango-Panna-Cotta-Feature.jpg"
+  ];
+  let Pennacotta_index = 0;
+
+  function showPennacotta() {
+    document.getElementById("Pennacotta_carousel").src = Pennacotta_images[Pennacotta_index];
+  }
+
+  function nextPennacotta() {
+    Pennacotta_index = (Pennacotta_index + 1) % Pennacotta_images.length;
+    showPennacotta();
+  }
+
+  function prevPennacotta() {
+    Pennacotta_index = (Pennacotta_index - 1 + Pennacotta_images.length) % Pennacotta_images.length;
+    showPennacotta();
+  }
+  // -------------------
+// Lemon Cookie Tiramisu Carousel
+// -------------------
+const LemonCookie_images = [
+  "https://www.kingarthurbaking.com/sites/default/files/styles/featured_image_2x/public/2025-07/Lemon-Tiramisu_2025_Lifestyle_H_2071.jpg?itok=Huz_IS5Q",
+  "https://www.cucinabyelena.com/wp-content/uploads/2024/05/Lemon-Tiramisu-with-Lemon-Curd-Recipe-Italian-44.jpg",
+  "https://cdn.apartmenttherapy.info/image/upload/f_jpg,q_auto:eco,c_fill,g_auto,w_1500,ar_4:3/k%2FPhoto%2FRecipes%2F2025-02-lemon-tiramisu%2Flemon-tiramisu-328"
+];
+
+let LemonCookie_index = 0;
+
+function showLemonCookie() {
+  document.getElementById("LemonCookie_carousel").src = LemonCookie_images[LemonCookie_index];
+}
+
+function nextLemonCookie() {
+  LemonCookie_index = (LemonCookie_index + 1) % LemonCookie_images.length;
+  showLemonCookie();
+}
+
+function prevLemonCookie() {
+  LemonCookie_index = (LemonCookie_index - 1 + LemonCookie_images.length) % LemonCookie_images.length;
+  showLemonCookie();
+}
+// -------------------
+// Pecan Pie Carousel
+// -------------------
+const PecanPie_images = [
+  "https://spiceislands.com/wp-content/uploads/Spice-Islands-Bourbon-Pecan-Pie-Pure-Vanilla-Extract-5-e1680888843873.jpg",
+  "https://www.simplyrecipes.com/thmb/mBdK1eArSCynGEfXeJH_2-NK9d0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/__opt__aboutcom__coeus__resources__content_migration__simply_recipes__uploads__2014__11__Pecan-Pie-LEAD-1-e189ae6b84724b49b445c55c41a37054.jpg",
+  "https://i.etsystatic.com/26315184/r/il/a525be/3637606331/il_300x300.3637606331_1pnw.jpg"
+];
+
+let PecanPie_index = 0;
+
+function showPecanPie() {
+  document.getElementById("PecanPie_carousel").src = PecanPie_images[PecanPie_index];
+}
+
+function nextPecanPie() {
+  PecanPie_index = (PecanPie_index + 1) % PecanPie_images.length;
+  showPecanPie();
+}
+
+function prevPecanPie() {
+  PecanPie_index = (PecanPie_index - 1 + PecanPie_images.length) % PecanPie_images.length;
+  showPecanPie();
+}
+// -------------------
+// Lemon Cookies Carousel
+// -------------------
+const LemonCookies_images = [
+  "https://thefirstyearblog.com/wp-content/uploads/2018/05/Lemon-Sugar-Cookies-2020-17.jpg",
+  "https://scientificallysweet.com/wp-content/uploads/2025/02/IMG_5645-lemon-sugar-cookies3-720x941.jpg",
+  "https://spaceshipsandlaserbeams.com/wp-content/uploads/2021/05/Lemon-Sugar-Cookies-Recipe-Card.jpg"
+];
+
+let LemonCookies_index = 0;
+
+function showLemonCookies() {
+  document.getElementById("LemonCookies_carousel").src = LemonCookies_images[LemonCookies_index];
+}
+
+function nextLemonCookies() {
+  LemonCookies_index = (LemonCookies_index + 1) % LemonCookies_images.length;
+  showLemonCookies();
+}
+
+function prevLemonCookies() {
+  LemonCookies_index = (LemonCookies_index - 1 + LemonCookies_images.length) % LemonCookies_images.length;
+  showLemonCookies();
+}
+</script>
 </body>
 </html>
