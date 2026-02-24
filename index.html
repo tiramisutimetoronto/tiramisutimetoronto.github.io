@@ -264,9 +264,12 @@
                 <!-- Mango Tiramisu -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
                   <div class="relative overflow-hidden rounded-xl">
-                    <img src="https://www.abakingjourney.com/wp-content/uploads/2020/09/Mango-Panna-Cotta-Feature.jpg"
+                    <img id="MangoTiramisu_carousel"
+                        src="https://www.spatuladesserts.com/wp-content/uploads/2024/06/Mango-Tiramisu-900x1200.jpg"
                         alt="Mango Tiramisu"
                         class="w-full h-80 object-cover group-hover:scale-105 transition duration-500 rounded-xl">
+                    <button onclick="prevMangoTiramisu()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">‹</button>
+                    <button onclick="nextMangoTiramisu()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">›</button>
                   </div>
                   <div class="p-6">
                     <h3 class="text-xl font-bold text-amber-800 mb-2">Mango Tiramisu</h3>
@@ -286,9 +289,12 @@
                 <!-- Strawberry Tiramisu -->
                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition duration-300 group">
                   <div class="relative overflow-hidden rounded-xl">
-                    <img src="https://www.spatuladesserts.com/wp-content/uploads/2023/05/Strawberry-Tiramisu-7615.jpg"
+                    <img id="StrawberryTiramisu_carousel"
+                        src="https://www.spatuladesserts.com/wp-content/uploads/2023/05/Strawberry-Tiramisu-7615.jpg"
                         alt="Strawberry Tiramisu"
                         class="w-full h-80 object-cover group-hover:scale-105 transition duration-500 rounded-xl">
+                    <button onclick="prevStrawberryTiramisu()" class="absolute left-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">‹</button>
+                    <button onclick="nextStrawberryTiramisu()" class="absolute right-3 top-1/2 -translate-y-1/2 bg-white/80 text-amber-800 rounded-full p-2 shadow">›</button>
                   </div>
                   <div class="p-6">
                     <h3 class="text-xl font-bold text-amber-800 mb-2">Strawberry Tiramisu</h3>
@@ -532,6 +538,64 @@ function prevMatchaTiramisu() {
     (MatchaTiramisu_index - 1 + MatchaTiramisu_images.length) %
     MatchaTiramisu_images.length;
   showMatchaTiramisu();
+}
+
+// -------------------
+// Mango Tiramisu Carousel
+// -------------------
+const MangoTiramisu_images = [
+  "https://www.spatuladesserts.com/wp-content/uploads/2024/06/Mango-Tiramisu-900x1200.jpg",
+  "https://www.abakingjourney.com/wp-content/uploads/2020/09/Mango-Panna-Cotta-Feature.jpg",
+  "https://www.faskitchen.com/wp-content/uploads/2015/04/mango-tiramisu.jpg"
+];
+
+let MangoTiramisu_index = 0;
+
+function showMangoTiramisu() {
+  document.getElementById("MangoTiramisu_carousel").src =
+    MangoTiramisu_images[MangoTiramisu_index];
+}
+
+function nextMangoTiramisu() {
+  MangoTiramisu_index =
+    (MangoTiramisu_index + 1) % MangoTiramisu_images.length;
+  showMangoTiramisu();
+}
+
+function prevMangoTiramisu() {
+  MangoTiramisu_index =
+    (MangoTiramisu_index - 1 + MangoTiramisu_images.length) %
+    MangoTiramisu_images.length;
+  showMangoTiramisu();
+}
+
+// -------------------
+// Strawberry Tiramisu Carousel
+// -------------------
+const StrawberryTiramisu_images = [
+  "https://www.spatuladesserts.com/wp-content/uploads/2023/05/Strawberry-Tiramisu-7615.jpg",
+  "https://bakingwithbutter.com/wp-content/uploads/2022/10/strawberry-tiramisu.jpg",
+  "https://www.thecookingcollective.com.au/wp-content/uploads/2023/08/Strawberry-tiramisu-4.jpg"
+];
+
+let StrawberryTiramisu_index = 0;
+
+function showStrawberryTiramisu() {
+  document.getElementById("StrawberryTiramisu_carousel").src =
+    StrawberryTiramisu_images[StrawberryTiramisu_index];
+}
+
+function nextStrawberryTiramisu() {
+  StrawberryTiramisu_index =
+    (StrawberryTiramisu_index + 1) % StrawberryTiramisu_images.length;
+  showStrawberryTiramisu();
+}
+
+function prevStrawberryTiramisu() {
+  StrawberryTiramisu_index =
+    (StrawberryTiramisu_index - 1 + StrawberryTiramisu_images.length) %
+    StrawberryTiramisu_images.length;
+  showStrawberryTiramisu();
 }
 </script>
 </body>
